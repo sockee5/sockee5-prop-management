@@ -1,21 +1,18 @@
-import React, { Component } from 'react';
-import { reduxForm, Field } from 'redux-form';
+import React, { Component } from "react";
+import { reduxForm, Field } from "redux-form";
 
-import { FormTitle } from '../formTitle';
-import { FormInput, FormButton } from '../formFields';
-import TextLink from '../textLink';
+import { FormTitle } from "../formTitle";
+import { FormInput, FormButton } from "../formFields";
+import TextLink from "../textLink";
 
 class SignupForm extends Component {
     render() {
 
-            const { handleSubmit } = this.props;
+        const { handleSubmit } = this.props;
 
         return (
             <form onSubmit={handleSubmit} className="sign-up-form">
-                <FormTitle className="sign-up-form__title" text="Login" />
-                { /* Full Name */ }
-                { /* Unit */ }
-
+                <FormTitle className="sign-up-form__title" text="New User" />
                 <Field
                     className="sign-up-form__fullname"
                     placeholder="Enter Your Full Name"
@@ -29,7 +26,7 @@ class SignupForm extends Component {
                     placeholder="Enter Unit #"
                     name="unit"
                     type="text"
-                    title="Unit"
+                    title="Unit #"
                     component={FormInput}
                 />
                 <Field
@@ -55,16 +52,17 @@ class SignupForm extends Component {
                     title="Create Account"
                     component={FormButton}
                 />
-                <div className="sign-up-form__text-links">
-                    <TextLink to="/signin" text="Already Registered? Log in" />
+                <div className='sign-up-form__text-links'>
+                    <TextLink to='/signin' text='Already Registered? Login' />
                 </div>
+
             </form>
-        )
+        );
     }
 }
 
 SignupForm = reduxForm({
-    form: 'signup'
+    form: "signup"
 })(SignupForm);
 
 export default SignupForm;

@@ -1,6 +1,6 @@
 import {
     signUp
-} from './auth'
+} from './auth';
 
 export {
     signUp
