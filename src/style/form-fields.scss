@@ -1,6 +1,7 @@
 
 // Input
-.form-input {
+.form-input,
+.form-textarea {
     display: grid;
     grid-template-columns: 3fr 10fr;
     grid-template-rows: 1fr;
@@ -19,7 +20,8 @@
     }
 }
 
-.form-input {
+.form-input,
+.form-textarea {
 
     &__title {
         color: $color-red-BA;
@@ -39,6 +41,19 @@
     }
 }
 
+.form-textarea {
+
+    &__title {
+        align-self: start;
+    }
+
+    &__input { 
+        resize: none;
+        height: 35.5rem;
+        padding-top: 1rem;
+        font-size: 16px;
+    }
+}
 
 // Button
 .form-button {
