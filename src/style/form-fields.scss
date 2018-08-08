@@ -2,10 +2,12 @@
 // Input
 .form-input {
     display: grid;
-    grid-template-columns: 129px 500px;
+    grid-template-columns: 3fr 10fr;
     grid-template-rows: 1fr;
 
     align-items: center;
+    width: 100%;
+    justify-content: center;
 
     &__title {
         grid-row: 1/-1;
@@ -28,7 +30,7 @@
 
     &__input {
         height: 4rem;
-        width: 50rem;
+        width: 100%;
         border: 1px solid $color-gray-E6;
         border-radius: .5rem;
         padding-left: 2rem;
@@ -52,5 +54,6 @@
         font-weight: 500;
         line-height: 2.8rem;
         text-align: center;
+        outline: transparent;
     }
 }
