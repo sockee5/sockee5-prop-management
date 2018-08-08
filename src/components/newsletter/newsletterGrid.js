@@ -9,7 +9,7 @@ class NewsletterGrid extends Component {
     
 
     handleAddNewsletter = () => {
-        this.props.history.push('/newletter/new');
+        this.props.history.push('/newsletter/new');
     }
 
     render() {
