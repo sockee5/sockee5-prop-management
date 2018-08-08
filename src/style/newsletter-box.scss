@@ -1,11 +1,7 @@
 .newsletter-box {
+    grid-row: box-s/box-e;
+    grid-column: box-s/box-e;
     align-content: center;
-
-    display: grid;
-    grid-template-rows: [s] 8.1rem [m] 2.3rem [e];
-    grid-template-columns: [s] 1fr [e];
-    justify-items: center;
-    align-items: center;
 
     height: 16rem;
     width: 16rem;
@@ -13,6 +9,11 @@
     border-radius: .5rem;
 
     color: $color-red-BA;
+
+    display: grid;
+    grid-template-rows: [s] 8.1rem [m] 2.3rem [e];
+    grid-template-columns: [s] 1fr [e];
+    justify-items: center;
     
     &__day {
         // align-self: end;
