@@ -1,10 +1,12 @@
 
-// Input
+// INPUT
+
 .form-input,
 .form-textarea {
     display: grid;
-    grid-template-columns: 3fr 10fr;
     grid-template-rows: 1fr;
+    grid-template-columns: 3fr 10fr;
+    // grid-template-columns: 129px 500px;
 
     align-items: center;
     width: 100%;
@@ -22,16 +24,15 @@
 
 .form-input,
 .form-textarea {
-
     &__title {
         color: $color-red-BA;
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 2.3rem;
     }
-
     &__input {
         height: 4rem;
+        // width: 50rem;
         width: 100%;
         border: 1px solid $color-gray-E6;
         border-radius: .5rem;
@@ -42,33 +43,48 @@
 }
 
 .form-textarea {
-
     &__title {
         align-self: start;
     }
-
-    &__input { 
+    &__input {
         resize: none;
         height: 35.5rem;
         padding-top: 1rem;
-        font-size: 16px;
     }
 }
 
-// Button
-.form-button {
+// BUTTON
 
+.form-button {
     &__button {
         height: 4rem;
         width: 21.6rem;
         border-radius: 2rem;
         background-color: $color-red-BA;
-         
+
         color: white;
         font-size: 2.2rem;
         font-weight: 500;
         line-height: 2.8rem;
         text-align: center;
-        outline: transparent;
+    }
+}
+
+.form-button-small {
+    &__button {
+        background: white;
+        border-radius: 1.6rem;
+        border: 1px solid $color-gray-4D;
+        width: 13rem;
+        height: 2.4rem;
+
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        text-align: center;
+    }
+    &__danger {
+        border: none;
+        color: white;
+        background-color: $color-red-BA;
     }
 }

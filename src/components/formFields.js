@@ -6,12 +6,12 @@ export class FormInput extends Component {
         const { className, title, input, type, placeholder } = this.props;
         return (
             <div className={`${className} form-input`}>
-                <label className="form-input__title">{title}</label>
-                <input 
+                <label className='form-input__title'>{title}</label>
+                <input
                     className='form-input__input'
                     type={type}
                     {...input}
-                    placeholder={placeholder}
+                    placeholder={placeholder}    
                 />
             </div>
         )
@@ -23,27 +23,34 @@ export class FormTextArea extends Component {
         const { className, title, input, type, placeholder } = this.props;
         return (
             <div className={`${className} form-textarea`}>
-                <label className="form-textarea__title">{title}</label>
-                <textarea 
+                <label className='form-textarea__title'>{title}</label>
+                <textarea
                     className='form-textarea__input'
                     type={type}
                     {...input}
-                    placeholder={placeholder}
-                ></textarea>
+                    placeholder={placeholder} 
+                   
+                >
+                
+                </textarea>
             </div>
         )
     }
 }
 
+
 export class FormButton extends Component {
     render() {
-        const { className, title, input, type } = this.props;
+        const { className, title, input, type, small, danger } = this.props;
         return (
-            <div className={`${className} form-button`}>
+            <div className={`${className} ${small ? 'form-button-small' : 'form-button'} `}>
                 <button
-                    className='form-button__button'
+                    className={`
+                        ${small ? 'form-button-small' : 'form-button'}__button 
+                        ${danger ? 'form-button-small__danger' : ''}
+                    `}
                     type={type}
-                    {...input}
+                    {...input} 
                 >
                 {title}
                 </button>
